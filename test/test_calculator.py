@@ -1,4 +1,4 @@
-from app.calculator import add,sub
+from App.calculator import add,sub
 
 def test_add():
   assert add(5,9) == 14
