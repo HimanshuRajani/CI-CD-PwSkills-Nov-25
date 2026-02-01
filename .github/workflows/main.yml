@@ -1,0 +1,27 @@
+name: CICD Pwskills calculator
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: action/checkout@v4
+
+      - name: Setup Python
+        uses: action/setup-pyhon@v5
+        with:
+          python-version: "3.11"
+
+      - name: Installing Dependencies
+        run: |
+            pip install -r requirements.txt
+
+      - name: Run Unit Tests
+        run: |
+            pytest
+        
+     
