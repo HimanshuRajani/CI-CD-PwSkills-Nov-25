@@ -27,7 +27,7 @@ jobs:
       - name: create build Artifact
         run: |
           mkdir build
-          cp -r app build/
+          cp -r App build/
           zip -r python-app-build.zip build
 
       - name: Upload Build Artifact
